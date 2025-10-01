@@ -78,18 +78,184 @@ export const Footer = () => {
           <Grid item xs={12} md={4}>
             <Fade in={visible} timeout={800}>
               <Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+                  {/* Spectacular Custom SVG Tornado Icon */}
                   <Box
                     sx={{
-                      animation: 'rotate 4s linear infinite',
-                      '@keyframes rotate': {
-                        '0%': { transform: 'rotate(0deg)' },
-                        '100%': { transform: 'rotate(360deg)' },
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: 36,
+                      height: 36,
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #10b981, #8b5a2b)',
+                      boxShadow: '0 3px 15px rgba(16, 185, 129, 0.3)',
+                      animation: 'footerPulse 3s ease-in-out infinite alternate',
+                      '@keyframes footerPulse': {
+                        '0%': { 
+                          boxShadow: '0 3px 15px rgba(16, 185, 129, 0.3), 0 0 0 0 rgba(16, 185, 129, 0.6)',
+                          transform: 'scale(1)',
+                        },
+                        '100%': { 
+                          boxShadow: '0 3px 15px rgba(16, 185, 129, 0.4), 0 0 0 6px rgba(16, 185, 129, 0)',
+                          transform: 'scale(1.03)',
+                        },
                       },
                     }}
                   >
-                    🌪️
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{
+                        filter: 'drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3))',
+                      }}
+                    >
+                      {/* Tornado Funnel - Main Body */}
+                      <path
+                        d="M12 2C12 2 8 6 8 10C8 12 10 14 12 16C14 14 16 12 16 10C16 6 12 2Z"
+                        fill="url(#footerTornadoGradient)"
+                        opacity="0.9"
+                      >
+                        <animateTransform
+                          attributeName="transform"
+                          type="rotate"
+                          values="0 12 12;360 12 12"
+                          dur="8s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      
+                      {/* Inner Tornado Core */}
+                      <path
+                        d="M12 4C12 4 10 6 10 9C10 10.5 11 12 12 13C13 12 14 10.5 14 9C14 6 12 4Z"
+                        fill="url(#footerCoreGradient)"
+                        opacity="0.8"
+                      >
+                        <animateTransform
+                          attributeName="transform"
+                          type="rotate"
+                          values="360 12 12;0 12 12"
+                          dur="6s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      
+                      {/* Debris Particles */}
+                      <circle cx="10" cy="7" r="0.8" fill="#8b5a2b" opacity="0.7">
+                        <animateTransform
+                          attributeName="transform"
+                          type="rotate"
+                          values="0 12 12;360 12 12"
+                          dur="4s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="14" cy="9" r="0.6" fill="#404040" opacity="0.6">
+                        <animateTransform
+                          attributeName="transform"
+                          type="rotate"
+                          values="360 12 12;0 12 12"
+                          dur="3s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="11" cy="11" r="0.7" fill="#8b5a2b" opacity="0.8">
+                        <animateTransform
+                          attributeName="transform"
+                          type="rotate"
+                          values="0 12 12;360 12 12"
+                          dur="5s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      
+                      {/* Lightning Effect */}
+                      <path
+                        d="M13 3L12.5 6L14 7L13 9L14.5 10L13 12"
+                        stroke="#f59e0b"
+                        strokeWidth="0.5"
+                        fill="none"
+                        opacity="0"
+                      >
+                        <animate
+                          attributeName="opacity"
+                          values="0;1;0"
+                          dur="2s"
+                          repeatCount="indefinite"
+                          begin="0s"
+                        />
+                        <animate
+                          attributeName="stroke-width"
+                          values="0.5;1;0.5"
+                          dur="2s"
+                          repeatCount="indefinite"
+                          begin="0s"
+                        />
+                      </path>
+                      
+                      {/* Wind Lines */}
+                      <path
+                        d="M6 8L8 8M6 10L9 10M6 12L7 12"
+                        stroke="#10b981"
+                        strokeWidth="0.3"
+                        opacity="0.6"
+                      >
+                        <animate
+                          attributeName="opacity"
+                          values="0.6;1;0.6"
+                          dur="1.5s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      <path
+                        d="M16 8L18 8M16 10L19 10M16 12L17 12"
+                        stroke="#10b981"
+                        strokeWidth="0.3"
+                        opacity="0.6"
+                      >
+                        <animate
+                          attributeName="opacity"
+                          values="0.6;1;0.6"
+                          dur="1.5s"
+                          repeatCount="indefinite"
+                          begin="0.5s"
+                        />
+                      </path>
+                      
+                      {/* Gradients */}
+                      <defs>
+                        <linearGradient id="footerTornadoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#10b981" />
+                          <stop offset="50%" stopColor="#34d399" />
+                          <stop offset="100%" stopColor="#8b5a2b" />
+                          <animateTransform
+                            attributeName="gradientTransform"
+                            type="rotate"
+                            values="0 12 12;360 12 12"
+                            dur="10s"
+                            repeatCount="indefinite"
+                          />
+                        </linearGradient>
+                        
+                        <linearGradient id="footerCoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#404040" />
+                          <stop offset="50%" stopColor="#10b981" />
+                          <stop offset="100%" stopColor="#2d2d2d" />
+                          <animateTransform
+                            attributeName="gradientTransform"
+                            type="rotate"
+                            values="360 12 12;0 12 12"
+                            dur="8s"
+                            repeatCount="indefinite"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
                   </Box>
+                  
                   <Typography
                     variant="h6"
                     sx={{
