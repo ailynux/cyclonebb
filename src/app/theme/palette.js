@@ -1,48 +1,48 @@
-// Custom color palette for CycloneBB
+// Custom color palette for CycloneBB - Earth & Storm Theme
 export const palette = {
   mode: 'dark',
   background: {
-    default: '#0b0f18',
-    paper: '#111827',
+    default: '#0a0a0a', // Deep black
+    paper: '#1a1a1a', // Dark gray
   },
   border: {
-    main: '#1f2937',
-    light: '#374151',
+    main: '#2d2d2d', // Medium gray
+    light: '#404040', // Light gray
   },
   primary: {
-    main: '#00d8ff', // Storm teal
-    light: '#33e0ff',
-    dark: '#00b8e6',
-    contrastText: '#0b0f18',
+    main: '#10b981', // Forest green
+    light: '#34d399',
+    dark: '#059669',
+    contrastText: '#000000',
   },
   secondary: {
-    main: '#a78bfa', // Neon purple for "BB"
-    light: '#c4b5fd',
-    dark: '#8b5cf6',
-    contrastText: '#0b0f18',
+    main: '#8b5a2b', // Rich brown
+    light: '#a0672e',
+    dark: '#6d4422',
+    contrastText: '#ffffff',
   },
   success: {
-    main: '#22c55e', // Safe
+    main: '#22c55e', // Emerald green
     light: '#4ade80',
     dark: '#16a34a',
-    contrastText: '#0b0f18',
+    contrastText: '#000000',
   },
   warning: {
-    main: '#f59e0b', // Watch
+    main: '#f59e0b', // Amber
     light: '#fbbf24',
     dark: '#d97706',
-    contrastText: '#0b0f18',
+    contrastText: '#000000',
   },
   error: {
-    main: '#ef4444', // Warning
+    main: '#ef4444', // Red
     light: '#f87171',
     dark: '#dc2626',
     contrastText: '#ffffff',
   },
   text: {
-    primary: '#f9fafb',
-    secondary: '#d1d5db',
-    disabled: '#6b7280',
+    primary: '#f5f5f5', // Off-white
+    secondary: '#a3a3a3', // Light gray
+    disabled: '#737373', // Medium gray
   },
-  divider: '#1f2937',
+  divider: '#2d2d2d',
 }
