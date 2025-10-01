@@ -9,7 +9,7 @@ export default function TornadoScene({ isMobile = false }) {
     if (!mount) return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#0b0f18");
+    scene.background = new THREE.Color("#0a0a0a"); // Deep black background
 
     const camera = new THREE.PerspectiveCamera(60, mount.clientWidth / mount.clientHeight, 0.1, 1000);
     camera.position.set(0, 1.5, 4);
@@ -23,11 +23,11 @@ export default function TornadoScene({ isMobile = false }) {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambientLight);
 
-    const pointLight1 = new THREE.PointLight(0x00d8ff, 1.2, 100);
+    const pointLight1 = new THREE.PointLight(0x10b981, 1.2, 100);
     pointLight1.position.set(2, 3, 2);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0xa78bfa, 0.8, 100);
+    const pointLight2 = new THREE.PointLight(0x8b5a2b, 0.8, 100);
     pointLight2.position.set(-2, 2, 3);
     scene.add(pointLight2);
 
@@ -37,7 +37,7 @@ export default function TornadoScene({ isMobile = false }) {
     // Main tornado funnel
     const mainConeGeometry = new THREE.ConeGeometry(0.8, 2.5, 32);
     const mainConeMaterial = new THREE.MeshStandardMaterial({
-      color: 0x4a5568,
+      color: 0x404040,
       transparent: true,
       opacity: 0.6,
       side: THREE.DoubleSide
@@ -49,7 +49,7 @@ export default function TornadoScene({ isMobile = false }) {
     // Secondary inner funnel
     const innerConeGeometry = new THREE.ConeGeometry(0.5, 2.2, 32);
     const innerConeMaterial = new THREE.MeshStandardMaterial({
-      color: 0x2d3748,
+      color: 0x2d2d2d,
       transparent: true,
       opacity: 0.8,
       side: THREE.DoubleSide
@@ -61,7 +61,7 @@ export default function TornadoScene({ isMobile = false }) {
     // Core funnel (darkest)
     const coreConeGeometry = new THREE.ConeGeometry(0.3, 2.0, 32);
     const coreConeMaterial = new THREE.MeshStandardMaterial({
-      color: 0x1a202c,
+      color: 0x1a1a1a,
       transparent: true,
       opacity: 0.9,
       side: THREE.DoubleSide
@@ -73,8 +73,8 @@ export default function TornadoScene({ isMobile = false }) {
     // Debris particles
     const debrisGeometry = new THREE.SphereGeometry(0.02, 8, 6);
     const debrisMaterial = new THREE.MeshStandardMaterial({
-      color: 0xf59e0b,
-      emissive: 0xef4444,
+      color: 0x8b5a2b,
+      emissive: 0x10b981,
       emissiveIntensity: 0.3
     });
     

@@ -94,10 +94,10 @@ export const Footer = () => {
                     variant="h6"
                     sx={{
                       fontWeight: 700,
-                      background: 'linear-gradient(45deg, #00d8ff, #a78bfa)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
+                    background: 'linear-gradient(45deg, #10b981, #8b5a2b)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
                     }}
                   >
                     CycloneBB
@@ -168,7 +168,7 @@ export const Footer = () => {
                         },
                         '&:hover': {
                           color: 'primary.main',
-                          backgroundColor: 'rgba(0, 216, 255, 0.1)',
+                          backgroundColor: 'rgba(16, 185, 129, 0.1)',
                           transform: 'translateX(5px)',
                         },
                       }}

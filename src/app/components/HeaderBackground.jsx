@@ -9,7 +9,7 @@ export default function HeaderBackground() {
     if (!mount) return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#0b0f18");
+    scene.background = new THREE.Color("#0a0a0a");
 
     const camera = new THREE.PerspectiveCamera(75, mount.clientWidth / mount.clientHeight, 0.1, 1000);
     camera.position.set(0, 0, 2);
@@ -35,11 +35,19 @@ export default function HeaderBackground() {
       positions[i3 + 1] = (Math.random() - 0.5) * 2; // y
       positions[i3 + 2] = Math.random() * 0.1; // z
 
-      // Color based on position (teal to purple gradient)
+      // Color based on position (green to brown gradient)
       const colorIntensity = Math.random();
-      colors[i3] = 0.0 + colorIntensity * 0.5; // r (teal)
-      colors[i3 + 1] = 0.85 + colorIntensity * 0.15; // g
-      colors[i3 + 2] = 1.0; // b
+      if (Math.random() > 0.6) {
+        // Brown particles (40% chance)
+        colors[i3] = 0.55 + colorIntensity * 0.2; // r
+        colors[i3 + 1] = 0.35 + colorIntensity * 0.1; // g
+        colors[i3 + 2] = 0.17 + colorIntensity * 0.1; // b
+      } else {
+        // Green particles (60% chance)
+        colors[i3] = 0.06 + colorIntensity * 0.3; // r
+        colors[i3 + 1] = 0.73 + colorIntensity * 0.2; // g
+        colors[i3 + 2] = 0.51 + colorIntensity * 0.2; // b
+      }
 
       sizes[i] = Math.random() * 0.02 + 0.005;
     }
@@ -68,10 +76,10 @@ export default function HeaderBackground() {
     for (let i = 0; i < 8; i++) {
       const geometry = new THREE.SphereGeometry(0.05, 16, 16);
       const material = new THREE.MeshStandardMaterial({
-        color: i % 2 === 0 ? 0x00d8ff : 0xa78bfa,
+        color: i % 2 === 0 ? 0x10b981 : 0x8b5a2b,
         transparent: true,
         opacity: 0.3,
-        emissive: i % 2 === 0 ? 0x00d8ff : 0xa78bfa,
+        emissive: i % 2 === 0 ? 0x10b981 : 0x8b5a2b,
         emissiveIntensity: 0.2
       });
       
@@ -95,7 +103,7 @@ export default function HeaderBackground() {
     for (let i = 0; i < 5; i++) {
       const geometry = new THREE.RingGeometry(0.03, 0.05, 16);
       const material = new THREE.MeshStandardMaterial({
-        color: 0xf59e0b,
+        color: 0x10b981,
         transparent: true,
         opacity: 0.4,
         side: THREE.DoubleSide
@@ -123,7 +131,7 @@ export default function HeaderBackground() {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0x00d8ff, 0.8, 100);
+    const pointLight = new THREE.PointLight(0x10b981, 0.8, 100);
     pointLight.position.set(0, 0, 1);
     scene.add(pointLight);
 

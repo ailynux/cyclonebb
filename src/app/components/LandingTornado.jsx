@@ -15,11 +15,11 @@ export default function LandingTornado() {
     canvas.height = 256;
     const context = canvas.getContext('2d');
     
-    const gradient = context.createLinearGradient(0, 0, 256, 0);
-    gradient.addColorStop(0, '#0b0f18');
-    gradient.addColorStop(0.3, '#111827');
-    gradient.addColorStop(0.6, '#1a202c');
-    gradient.addColorStop(1, '#0b0f18');
+        const gradient = context.createLinearGradient(0, 0, 256, 0);
+        gradient.addColorStop(0, '#0a0a0a');
+        gradient.addColorStop(0.3, '#1a1a1a');
+        gradient.addColorStop(0.6, '#2d2d2d');
+        gradient.addColorStop(1, '#0a0a0a');
     
     context.fillStyle = gradient;
     context.fillRect(0, 0, 256, 256);
@@ -40,15 +40,15 @@ export default function LandingTornado() {
     scene.add(ambientLight);
 
     // Multiple colored lights for dramatic effect
-    const stormLight1 = new THREE.PointLight(0x00d8ff, 2.0, 100);
+    const stormLight1 = new THREE.PointLight(0x10b981, 2.0, 100);
     stormLight1.position.set(3, 4, 2);
     scene.add(stormLight1);
 
-    const stormLight2 = new THREE.PointLight(0xa78bfa, 1.5, 100);
+    const stormLight2 = new THREE.PointLight(0x8b5a2b, 1.5, 100);
     stormLight2.position.set(-3, 3, 3);
     scene.add(stormLight2);
 
-    const stormLight3 = new THREE.PointLight(0xf59e0b, 1.0, 100);
+    const stormLight3 = new THREE.PointLight(0x404040, 1.0, 100);
     stormLight3.position.set(0, 5, -2);
     scene.add(stormLight3);
 

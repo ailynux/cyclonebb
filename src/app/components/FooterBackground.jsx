@@ -9,7 +9,7 @@ export default function FooterBackground() {
     if (!mount) return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#111827");
+    scene.background = new THREE.Color("#1a1a1a");
 
     const camera = new THREE.PerspectiveCamera(75, mount.clientWidth / mount.clientHeight, 0.1, 1000);
     camera.position.set(0, 0, 4);
@@ -35,18 +35,18 @@ export default function FooterBackground() {
       positions[i3 + 1] = (Math.random() - 0.5) * 3; // y
       positions[i3 + 2] = Math.random() * 2; // z
 
-      // Subtle color variation (mostly teal with some purple)
+      // Subtle color variation (mostly green with some brown)
       const colorIntensity = Math.random();
       if (Math.random() > 0.7) {
-        // Purple particles (30% chance)
-        colors[i3] = 0.65 + colorIntensity * 0.2; // r
-        colors[i3 + 1] = 0.55 + colorIntensity * 0.2; // g
-        colors[i3 + 2] = 0.98; // b
+        // Brown particles (30% chance)
+        colors[i3] = 0.55 + colorIntensity * 0.2; // r
+        colors[i3 + 1] = 0.35 + colorIntensity * 0.1; // g
+        colors[i3 + 2] = 0.17 + colorIntensity * 0.1; // b
       } else {
-        // Teal particles (70% chance)
-        colors[i3] = 0.0 + colorIntensity * 0.3; // r
-        colors[i3 + 1] = 0.85 + colorIntensity * 0.15; // g
-        colors[i3 + 2] = 1.0; // b
+        // Green particles (70% chance)
+        colors[i3] = 0.06 + colorIntensity * 0.3; // r
+        colors[i3 + 1] = 0.73 + colorIntensity * 0.2; // g
+        colors[i3 + 2] = 0.51 + colorIntensity * 0.2; // b
       }
 
       sizes[i] = Math.random() * 0.015 + 0.005;
@@ -76,10 +76,10 @@ export default function FooterBackground() {
     for (let i = 0; i < 6; i++) {
       const cloudGeometry = new THREE.SphereGeometry(0.08, 16, 16);
       const cloudMaterial = new THREE.MeshStandardMaterial({
-        color: 0x4a5568,
+        color: 0x404040,
         transparent: true,
         opacity: 0.2,
-        emissive: 0x00d8ff,
+        emissive: 0x10b981,
         emissiveIntensity: 0.1
       });
       
@@ -103,10 +103,10 @@ export default function FooterBackground() {
     for (let i = 0; i < 15; i++) {
       const rainGeometry = new THREE.CylinderGeometry(0.005, 0.005, 0.1, 6);
       const rainMaterial = new THREE.MeshStandardMaterial({
-        color: 0x00d8ff,
+        color: 0x10b981,
         transparent: true,
         opacity: 0.3,
-        emissive: 0x00d8ff,
+        emissive: 0x10b981,
         emissiveIntensity: 0.2
       });
       
@@ -132,11 +132,11 @@ export default function FooterBackground() {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
     scene.add(ambientLight);
 
-    const pointLight1 = new THREE.PointLight(0x00d8ff, 0.3, 100);
+    const pointLight1 = new THREE.PointLight(0x10b981, 0.3, 100);
     pointLight1.position.set(-3, 0, 3);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0xa78bfa, 0.2, 100);
+    const pointLight2 = new THREE.PointLight(0x8b5a2b, 0.2, 100);
     pointLight2.position.set(3, 0, 3);
     scene.add(pointLight2);
 

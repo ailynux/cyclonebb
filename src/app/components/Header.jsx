@@ -81,7 +81,7 @@ export const Header = () => {
       position="sticky" 
       elevation={0}
       sx={{
-        backgroundColor: scrolled ? 'rgba(17, 24, 39, 0.95)' : 'rgba(17, 24, 39, 0.8)',
+        backgroundColor: scrolled ? 'rgba(26, 26, 26, 0.95)' : 'rgba(26, 26, 26, 0.8)',
         backdropFilter: 'blur(20px)',
         borderBottom: '1px solid',
         borderColor: 'border.main',
@@ -114,7 +114,7 @@ export const Header = () => {
               component="div"
               sx={{
                 fontWeight: 700,
-                background: 'linear-gradient(45deg, #00d8ff, #a78bfa)',
+                background: 'linear-gradient(45deg, #10b981, #8b5a2b)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -135,7 +135,7 @@ export const Header = () => {
               >
                 🌪️
               </Box>
-              Cyclone<span style={{ color: '#a78bfa' }}>BB</span>
+              Cyclone<span style={{ color: '#8b5a2b' }}>BB</span>
             </Typography>
           </Box>
         </Slide>
@@ -184,15 +184,15 @@ export const Header = () => {
                     minWidth: 120,
                     transition: 'all 0.3s ease-in-out',
                     background: location.pathname === item.path 
-                      ? 'linear-gradient(45deg, #00d8ff, #a78bfa)' 
+                      ? 'linear-gradient(45deg, #10b981, #8b5a2b)' 
                       : 'transparent',
                     color: location.pathname === item.path ? 'white' : 'text.primary',
                     '&:hover': {
                       background: location.pathname === item.path
-                        ? 'linear-gradient(45deg, #00b8e6, #8b5cf6)'
-                        : 'rgba(0, 216, 255, 0.1)',
+                        ? 'linear-gradient(45deg, #059669, #6d4422)'
+                        : 'rgba(16, 185, 129, 0.1)',
                       transform: 'translateY(-2px)',
-                      boxShadow: '0 4px 12px rgba(0, 216, 255, 0.3)',
+                      boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)',
                     },
                   }}
                 >
@@ -218,7 +218,7 @@ export const Header = () => {
                 '&:hover': {
                   opacity: 1,
                   transform: 'scale(1.1) rotate(5deg)',
-                  color: '#00d8ff',
+                  color: '#10b981',
                 },
               }}
             >
@@ -297,7 +297,7 @@ export const Header = () => {
                 },
               },
               '&:hover': {
-                backgroundColor: 'rgba(0, 216, 255, 0.1)',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
                 transform: 'translateX(5px)',
               },
             }}

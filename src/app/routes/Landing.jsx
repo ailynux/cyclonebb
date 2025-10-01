@@ -45,14 +45,14 @@ export const Landing = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          background: `
-            linear-gradient(90deg, 
-              #0b0f18 0%, 
-              #111827 30%, 
-              #1a202c 60%, 
-              #0b0f18 100%
-            )
-          `,
+      background: `
+        linear-gradient(90deg, 
+          #0a0a0a 0%, 
+          #1a1a1a 30%, 
+          #2d2d2d 60%, 
+          #0a0a0a 100%
+        )
+      `,
           position: 'relative',
           overflow: 'hidden',
           minHeight: '100vh',
@@ -95,8 +95,8 @@ export const Landing = () => {
             background: `
               linear-gradient(90deg, 
                 transparent 0%, 
-                rgba(0, 0, 0, 0.1) 20%, 
-                rgba(0, 0, 0, 0.3) 100%
+                rgba(0, 0, 0, 0.2) 20%, 
+                rgba(0, 0, 0, 0.4) 100%
               )
             `,
             '@media (max-width: 1200px)': {
@@ -194,7 +194,7 @@ export const Landing = () => {
               variant="h1"
               sx={{
                 mb: 3,
-                background: 'linear-gradient(45deg, #00d8ff, #a78bfa)',
+                background: 'linear-gradient(45deg, #10b981, #8b5a2b)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -303,7 +303,7 @@ export const Landing = () => {
                 fontSize: '1.1rem',
                 fontWeight: 600,
                 borderRadius: 3,
-                background: 'linear-gradient(45deg, #00d8ff, #a78bfa)',
+                background: 'linear-gradient(45deg, #10b981, #8b5a2b)',
                 boxShadow: '0 8px 32px rgba(0, 216, 255, 0.3)',
                 '&:hover': {
                   background: 'linear-gradient(45deg, #00b8e6, #8b5cf6)',
@@ -518,7 +518,7 @@ export const Landing = () => {
                 fontSize: '1.1rem',
                 fontWeight: 600,
                 borderRadius: 3,
-                background: 'linear-gradient(45deg, #00d8ff, #a78bfa)',
+                background: 'linear-gradient(45deg, #10b981, #8b5a2b)',
                 '&:hover': {
                   background: 'linear-gradient(45deg, #00b8e6, #8b5cf6)',
                   transform: 'translateY(-2px)',
