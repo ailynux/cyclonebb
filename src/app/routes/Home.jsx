@@ -13,6 +13,7 @@ import { RiskBadge } from '../components/RiskBadge'
 import { AlertsList } from '../components/AlertsList'
 import { StormMiniMap } from '../components/StormMiniMap'
 import { LastUpdated } from '../components/LastUpdated'
+import TornadoScene from '../components/TornadoScene'
 import { getAlerts } from '../lib/apiClient'
 import { DEFAULT_STATE, REFETCH_INTERVALS } from '../lib/constants'
 
@@ -158,9 +159,36 @@ export const Home = () => {
             </Paper>
           </Grid>
 
-          {/* Storm Map */}
+          {/* 3D Tornado Visualization */}
           <Grid item xs={12} lg={5}>
-            <StormMiniMap area={area || selectedArea} alerts={alerts} />
+            <Paper
+              sx={{
+                p: 0,
+                backgroundColor: 'background.paper',
+                border: '1px solid',
+                borderColor: 'border.main',
+                borderRadius: 3,
+                overflow: 'hidden',
+                position: 'relative',
+              }}
+            >
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: 16,
+                  left: 16,
+                  zIndex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                }}
+              >
+                <Typography variant="h6" sx={{ fontWeight: 600, color: 'text.primary' }}>
+                  🌪️ Live Tornado Visualization
+                </Typography>
+              </Box>
+              <TornadoScene isMobile={false} />
+            </Paper>
           </Grid>
         </Grid>
 
